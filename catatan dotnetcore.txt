@@ -1,0 +1,69 @@
+instalasi:
+1. download dotnet SDK di https://dotnet.microsoft.com/en-us/download lalu install. setelah itu ketik di cmd:
+	dotnet --version 
+ bila muncul versinya, maka berhasil terinstall
+2. unduh dan install VS Code beserta extension "C#"
+
+membuat proyek:
+1. ketik di cmd:
+	dotnet new webapi -n namaproyek -controllers
+2. buat file HaloController.cs di folder controller
+3. di dalamnya, ketik seperti ini
+
+	using Microsoft.AspNetCore.Mvc; //untuk bisa membaca ApiController dan Route
+
+	namespace namaproyek.Controllers; //untuk memberi tahu letak file ini 
+
+	[ApiController] //memberi tahu bahwa ini controller untuk API
+	[Route("[controller]")] //memberi tahu alamat API. misalnya /halo
+	public class HaloController : ControllerBase //nama class yang menurunkan sifat dari ControllerBase agar bisa membaca Ok
+	{
+    		[HttpGet] //method dari controller ini, bisa get,post,delete, dan put
+    		public IActionResult Test() //nama methodnya. harus diawali huruf besar
+    		{
+        		return Ok("Halo Dunia"); //responsenya
+    		}
+
+		[HttpGet("juga")] //method dari controller ini, dalam hal ini berarti get. lalu diakses dengan alamat /halo/juga
+    		public IActionResult Juga() //nama method lainnya. harus sama dengan yang ada di dalam HttpGet 
+    		{
+        		return Ok("Halo Juga"); //responsenya
+    		}
+
+	}
+
+4. untuk menjalankannya, ketik di cmd:
+	dotnet watch
+ command ini berguna agar terjadi hot reload Ketika ada kodingan yg diedit 
+ nantinya akan muncul swagger untuk melakukan test API nya
+
+goodluck dan have fun
+
+
+P.S
+untuk konek ke MySQL, langkah2nya adalah:
+1. ketik di cmd:
+	dotnet add package MySqlConnector
+agar bisa koneksi ke MySQL
+2. update koding pada file appsettings.json:
+ "ConnectionStrings": {
+    "DefaultConnection": "server=localhost;database=belajardotnet;user=root;password=yourpassword"
+  }
+
+
+untuk hash password:
+1. ketik di cmd:
+	dotnet add package BCrypt.Net-Next
+untuk menambahkan package Bcrypt
+
+-------------------------------------------------------------
+untuk login dengan JWT:
+1. ketik di cmd
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+untuk menambahkan package JWT
+2. tambahkan koding di file appsettings.json
+"Jwt": {
+  "Key": "your_secret_key_here",
+  "Issuer": "your_issuer_here",
+  "Audience": "your_audience_here"
+}
