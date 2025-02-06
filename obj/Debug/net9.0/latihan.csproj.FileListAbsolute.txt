@@ -33,3 +33,12 @@ C:\proyekdotnetcore\latihan\obj\Debug\net9.0\latihan.genruntimeconfig.cache
 C:\proyekdotnetcore\latihan\obj\Debug\net9.0\ref\latihan.dll
 C:\proyekdotnetcore\latihan\bin\Debug\net9.0\MySqlConnector.dll
 C:\proyekdotnetcore\latihan\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\proyekdotnetcore\latihan\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\proyekdotnetcore\latihan\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\proyekdotnetcore\latihan\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\proyekdotnetcore\latihan\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\proyekdotnetcore\latihan\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\proyekdotnetcore\latihan\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\proyekdotnetcore\latihan\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\proyekdotnetcore\latihan\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\proyekdotnetcore\latihan\obj\Debug\net9.0\latihan.sourcelink.json
